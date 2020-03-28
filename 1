@@ -1,0 +1,41 @@
+package qwe;
+class Circle{
+	public double CenterX;
+	public double CenterY;
+	public double radius;
+	final float PI=3.14f;
+	double getArea() {
+		return radius*radius*PI;
+	}
+	double getPerimeter() {
+		return radius*2*PI;
+	}
+	public Circle() {
+		this(1.0);
+	}
+	public Circle(double r) {
+		radius=r;
+		System.out.println("有参构造方法被调用了");
+		System.out.println("周长:"+getPerimeter());
+		System.out.println("面积："+getArea());
+	}
+	public void setRadius(double r1) {
+		radius=r1;
+	}
+	public double getRadius(double r2) {
+		return r2;
+	}
+}
+public class Qee {
+
+	public static void main(String[] args) {
+		Circle c=new Circle();
+		c.radius=2.0;
+		System.out.println("周长:"+c.getPerimeter());
+		System.out.println("面积："+c.getArea());
+		c.setRadius(3.0);
+		System.out.println("周长:"+c.getPerimeter());
+		System.out.println("面积："+c.getArea());
+	}
+
+}
